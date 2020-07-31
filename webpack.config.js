@@ -13,6 +13,14 @@ module.exports = {
         publicPath: '/dist/',
         filename: 'js/bundle.js'
     },
+    resolve: {
+        alias: {
+            page: path.resolve(__dirname, 'src/page'),
+            component: path.resolve(__dirname, 'src/component'),
+            util: path.resolve(__dirname, 'src/util'),
+            service: path.resolve(__dirname, 'src/service'),
+        }
+    },
     module: {
         rules: [
             {
@@ -68,7 +76,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            template: 'src/index.html',
+            favicon: './favicon.ico'
         }),
         new ExtractTextPlugin("css/[name].css"),
         new webpack.optimize.CommonsChunkPlugin({
@@ -77,6 +86,15 @@ module.exports = {
         })
     ],
     devServer: {
-        // contentBase: path.join(__dirname, 'dist')
+        // contentBase: path.join(__dirname, 'dist'),
+        historyApiFallback: {
+            index: '/dist/index.html'
+        },
+        proxy: {
+            '/manage': {
+                target: 'http://admintest.happymmall.com',
+                changeOrigin: true
+            }
+        }
     }
 }

@@ -1,11 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect
+  } from "react-router-dom";
+import Home from 'page/home/index.jsx'
+import Layout  from 'component/layout/index.jsx'
+import Login from 'page/login/index.jsx'
 
-import './index.css'
-import './index.scss'
-import 'font-awesome/css/font-awesome.min.css'
+
+class App extends React.Component{
+    render(){
+        let LayoutRouter= (
+                <Layout>
+                    <Switch>
+                        <Route path="/" exact component={Home}></Route>
+                        <Redirect from="*" to="/"/>
+                        <button>test</button>
+                    </Switch>
+                </Layout>
+        )
+        return (
+            <Router>
+                <Switch>
+                    <Route path="/login"  component={Login}></Route>
+                    <Route path="/" render={props => LayoutRouter}></Route>
+                </Switch>
+            </Router>
+        )
+    }
+}
 
 ReactDOM.render(
-    <h1><i className="fa fa-camera-retro fa-lg"></i>hello</h1>,
+    <App/>,
     document.getElementById('root')
 )
