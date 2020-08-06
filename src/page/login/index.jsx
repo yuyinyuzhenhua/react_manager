@@ -12,7 +12,8 @@ class Login extends React.Component{
         super(props)
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            redirect: _mm.getUrlParam('redirect') || '/'
         }
     }
     onInputChange(e){
@@ -27,12 +28,12 @@ class Login extends React.Component{
             username : this.state.username,
             password : this.state.password
         }
-        _user.login(loginInfo).then(res => {
-            console.log(res);
+        _user.login(loginInfo).then(data => {
+            _mm.setStorage('userInfo', data)
+            this.props.history.push(this.state.redirect)
         }).catch(err => {
             console.log(err);
         })
-        console.log(loginInfo);
     }
     onInputKeyUp(e){
         if(e.keyCode === 13){
