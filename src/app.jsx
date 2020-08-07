@@ -13,6 +13,8 @@ import Product from 'page/product/router.jsx'
 import Layout  from 'component/layout/index.jsx'
 import Login from 'page/login/index.jsx'
 import ProductRouter    from 'page/product/router.jsx';
+import OrderList        from 'page/order/index.jsx';
+import OrderDetail from 'page/order/detail.jsx'
 
 
 class App extends React.Component{
@@ -22,7 +24,10 @@ class App extends React.Component{
                     <Switch>product/detail
                         <Route path="/" exact component={Home}></Route>
                         <Route path="/product" component={ProductRouter}></Route>
+                        <Route path="/order/index" component={OrderList}/>
+                        <Route path="/order/detail/:orderNumber" component={OrderDetail}/>
                         <Route path="/user" exact component={User}></Route>
+                        <Redirect from="/order" to="/order/index"></Redirect>
                         <Redirect from="*" to="/"/>
                     </Switch>
                 </Layout>
