@@ -9,9 +9,10 @@ import {
   } from "react-router-dom";
 import Home from 'page/home/index.jsx'
 import User from 'page/user/index.jsx'
-import Product from 'page/product/index.jsx'
+import Product from 'page/product/router.jsx'
 import Layout  from 'component/layout/index.jsx'
 import Login from 'page/login/index.jsx'
+import ProductRouter    from 'page/product/router.jsx';
 
 
 class App extends React.Component{
@@ -20,10 +21,9 @@ class App extends React.Component{
                 <Layout>
                     <Switch>
                         <Route path="/" exact component={Home}></Route>
+                        <Route path="/product" component={ProductRouter}></Route>
                         <Route path="/user" exact component={User}></Route>
-                        <Route path="/product" exact component={Product}></Route>
                         <Redirect from="*" to="/"/>
-                        <button>test</button>
                     </Switch>
                 </Layout>
         )
