@@ -114,7 +114,7 @@ class ProductList extends React.Component{
             pageNum         : 1,
             searchType      : searchType,
             searchKeyword   : searchKeyword
-        }, () => {
+        }, () => {            
             this.loadProductList()
         })
     }

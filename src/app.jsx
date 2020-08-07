@@ -19,7 +19,7 @@ class App extends React.Component{
     render(){
         let LayoutRouter= (
                 <Layout>
-                    <Switch>
+                    <Switch>product/detail
                         <Route path="/" exact component={Home}></Route>
                         <Route path="/product" component={ProductRouter}></Route>
                         <Route path="/user" exact component={User}></Route>
@@ -27,6 +27,7 @@ class App extends React.Component{
                     </Switch>
                 </Layout>
         )
+
         return (
             <Router>
                 <Switch>
