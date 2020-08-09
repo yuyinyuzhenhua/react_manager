@@ -5,7 +5,7 @@ import Product              from 'service/product-service.jsx'
 import PageTitle            from 'component/page-title/index.jsx';
 import CategorySelector     from './category-selector.jsx';
 import FileUploader         from 'util/file-uploader/index.jsx'
-// import RichEditor           from 'util/rich-editor/index.jsx'
+import RichEditor           from 'util/rich-editor/index.jsx'
 
 import './save.scss';
 
@@ -35,8 +35,8 @@ class ProductSave extends  React.Component{
 
     loadProduct(){
         if(this.state.id){            
-            _product.getProduct(this.state.id).then(res => {
-                let images = res.subImages.split(',');
+            _product.getProduct(this.state.id).then(res => {                
+                let images =res.subImages.split && res.subImages.split(',');
                 res.subImages = images.map((imgUri) => {
                     return {
                         uri: imgUri,
@@ -96,8 +96,6 @@ class ProductSave extends  React.Component{
             status      : this.state.status,
             parentCategoryId    : parseInt(this.state.parentCategoryId)
         };
-        console.log('product===');
-        console.log(product);
         
         let productCheckResult = _product.checkProduct(product);
         if(this.state.id){
@@ -117,6 +115,22 @@ class ProductSave extends  React.Component{
             _mm.errorTips(productCheckResult.msg);
         }
 
+    }
+
+
+    onImageDelete(e){
+        let index = parseInt(e.target.getAttribute('index')),
+        subImages = this.state.subImages;
+        subImages.splice(index, 1)        
+        this.setState({
+            subImages: subImages
+        })
+    }
+
+    onDetailValueChange(value){
+        this.setState({
+            detail: value
+        });
     }
 
 
@@ -196,7 +210,7 @@ class ProductSave extends  React.Component{
                                 onError={(errMsg) => this.onUploadError(errMsg)}/>
                         </div>
                     </div>
-                    {/* <div className="form-group">
+                    <div className="form-group">
                         <label className="col-md-2 control-label">商品详情</label>
                         <div className="col-md-10">
                             <RichEditor 
@@ -204,7 +218,7 @@ class ProductSave extends  React.Component{
                                 defaultDetail={this.state.defaultDetail}
                                 onValueChange={(value) => this.onDetailValueChange(value)}/>
                         </div>
-                    </div> */}
+                    </div>
                     <div className="form-group">
                         <div className="col-md-offset-2 col-md-10">
                             <button type="submit" className="btn btn-primary" 
