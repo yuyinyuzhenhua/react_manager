@@ -36,6 +36,34 @@ class CategoryList extends React.Component{
         })
     }
 
+    componentDidUpdate(prevProps, prevState){
+        let oldPath = prevProps.location.pathname,
+            newPath = this.props.location.pathname,
+            newId = this.props.match.params.categoryId || 0;
+        if(newPath !== oldPath){
+            this.setState({
+                parentCategoryId: newId
+            }, () => {
+                this.loadCategoryList()
+            })
+        }
+    }
+
+    onUpdateName(categoryId, categoryName){
+        let newName = window.prompt('请输入新的品类名称', categoryName);
+        if(newName){
+            _product.updateCategoryName({
+                categoryId: categoryId,
+                categoryName : newName
+            }).then(res => {
+                _mm.successTips(res);
+                this.loadCategoryList();
+            }, errMsg => {
+                _mm.errorTips(errMsg);
+            });
+        }
+    }
+
     render(){
         let listBody = this.state.list.map((category, index) => {
             return (
