@@ -27,6 +27,28 @@ class ProductDetail extends React.Component{
             status              : 1 //商品状态1为在售
         }
     }
+
+    componentDidMount(){
+        this.loadProduct()
+    }
+
+    loadProduct(){
+        if(this.state.id){
+            _product.getProduct(this.state.id).then(res => {
+                let images = res.subImages.split(',');
+                res.subImages = images.map((imgUri) => {
+                    return {
+                        uri: imgUri,
+                        url: res.imageHost + imgUri
+                    }
+                });
+                this.setState(res);
+            }, (errMsg) => {
+                _mm.errorTips(errMsg);
+            });
+        }
+    }
+
     render(){
         return (
             <div id="page-wrapper">
