@@ -955,10 +955,10 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
+babel-runtime@6.x, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
   version "6.26.0"
-  resolved "https://registry.npm.taobao.org/babel-runtime/download/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
-  integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
+  resolved "https://registry.npmmirror.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
+  integrity sha512-ITKNuq2wKlW1fJg9sSW52eepoYgZBggvOAHC0u/CYu/qxQ9EVzThCgR69BnSXLHjy2f7SY5zaQ4yt7H9ZVxY2g==
   dependencies:
     core-js "^2.4.0"
     regenerator-runtime "^0.11.0"
@@ -1467,6 +1467,11 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classnames@^2.2.6:
+  version "2.3.2"
+  resolved "https://registry.npmmirror.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
+  integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
 
 clean-css@4.2.x:
   version "4.2.3"
@@ -2107,6 +2112,11 @@ domhandler@^2.3.0:
   integrity sha1-iAUJfpM9ZehVRvcm1g9euItE+AM=
   dependencies:
     domelementtype "1"
+
+dompurify@^1.0.8:
+  version "1.0.11"
+  resolved "https://registry.npmmirror.com/dompurify/-/dompurify-1.0.11.tgz#fe0f4a40d147f7cebbe31a50a1357539cfc1eb4d"
+  integrity sha512-XywCTXZtc/qCX3iprD1pIklRVk/uhl8BKpkTxr+ZyMVUzSUg7wkQXRBp/euJ5J5moa1QvfpvaPQVP71z1O59dQ==
 
 domutils@1.5.1:
   version "1.5.1"
@@ -3693,6 +3703,21 @@ isstream@~0.1.2:
   resolved "https://registry.npm.taobao.org/isstream/download/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
+jquery@2.x:
+  version "2.2.4"
+  resolved "https://registry.npmmirror.com/jquery/-/jquery-2.2.4.tgz#2c89d6889b5eac522a7eea32c14521559c6cbf02"
+  integrity sha512-lBHj60ezci2u1v2FqnZIraShGgEXq35qCzMv4lITyHGppTnA13rwR0MgwyNJh9TnDs3aXUvd1xjAotfraMHX/Q==
+
+jquery@^3.0.0, jquery@^3.4.1:
+  version "3.6.1"
+  resolved "https://registry.npmmirror.com/jquery/-/jquery-3.6.1.tgz#fab0408f8b45fc19f956205773b62b292c147a16"
+  integrity sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw==
+
+jquery@~3.1.0:
+  version "3.1.1"
+  resolved "https://registry.npmmirror.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
+  integrity sha512-zuiWRmx65Kd1oFGdWLvAjbsumdOBFvs3r1vuqCyKFF79R7exBHNbiNEJ8LR+xkzgfxqBznMD/4Cv6PHXS6mvEw==
+
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.6.3"
   resolved "https://registry.npm.taobao.org/js-base64/download/js-base64-2.6.3.tgz?cache=0&sync_timestamp=1596129779367&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjs-base64%2Fdownload%2Fjs-base64-2.6.3.tgz#7afdb9b57aa7717e15d370b66e8f36a9cb835dc3"
@@ -5119,6 +5144,15 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
+prop-types@^15.5.7, prop-types@^15.7.2:
+  version "15.8.1"
+  resolved "https://registry.npmmirror.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
+
 prop-types@^15.6.0, prop-types@^15.6.2:
   version "15.7.2"
   resolved "https://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
@@ -5189,9 +5223,9 @@ qs@6.7.0:
   integrity sha1-QdwaAV49WB8WIXdr4xr7KHapsbw=
 
 qs@~6.3.0:
-  version "6.3.2"
-  resolved "https://registry.npm.taobao.org/qs/download/qs-6.3.2.tgz#e75bd5f6e268122a2a0e0bda630b2550c166502c"
-  integrity sha1-51vV9uJoEioqDgvaYwslUMFmUCw=
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.3.tgz#645c23bd6def4d552f258f0aadfeea6fd57f5a86"
+  integrity sha512-f8CQ/sKJBr9vfNJBdGiPzTSPUufuWyvOFkCYJKN9voqPWuBuhdlSZM78dOHKigtZ0BwuktYGrRFW2DXXc/f2Fg==
 
 qs@~6.5.2:
   version "6.5.2"
@@ -5260,6 +5294,16 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+rc-pagination@^1.15.1:
+  version "1.21.1"
+  resolved "https://registry.npmmirror.com/rc-pagination/-/rc-pagination-1.21.1.tgz#24206cf4be96119baae8decd3f9ffac91cc2c4d3"
+  integrity sha512-Z+iYLbrJOBKHdgoAjLhL9jOgb7nrbPzNmV31p0ikph010/Ov1+UkrauYzWhumUyR+GbRFi3mummdKW/WtlOewA==
+  dependencies:
+    babel-runtime "6.x"
+    classnames "^2.2.6"
+    prop-types "^15.5.7"
+    react-lifecycles-compat "^3.0.4"
+
 react-dom@16.2.0:
   version "16.2.0"
   resolved "https://registry.npm.taobao.org/react-dom/download/react-dom-16.2.0.tgz?cache=0&sync_timestamp=1595004854431&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-dom%2Fdownload%2Freact-dom-16.2.0.tgz#69003178601c0ca19b709b33a83369fe6124c044"
@@ -5270,10 +5314,15 @@ react-dom@16.2.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
+react-is@^16.13.1, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
-  resolved "https://registry.npm.taobao.org/react-is/download/react-is-16.13.1.tgz?cache=0&sync_timestamp=1595004855847&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-is%2Fdownload%2Freact-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
-  integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
+  resolved "https://registry.npmmirror.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
+  integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-lifecycles-compat@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.npmmirror.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+  integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
 react-router-dom@^5.2.0:
   version "5.2.0"
@@ -5830,6 +5879,47 @@ signal-exit@^3.0.0:
   version "3.0.3"
   resolved "https://registry.npm.taobao.org/signal-exit/download/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha1-oUEMLt2PB3sItOJTyOrPyvBXRhw=
+
+simditor@^2.3.6:
+  version "2.3.28"
+  resolved "https://registry.npmmirror.com/simditor/-/simditor-2.3.28.tgz#294e86eeae3e0e57255910aac9dd9070cc495628"
+  integrity sha512-nO20L2NZ3LsGZtvX291hd0gHiBLC56Oh/SHTwektM1tNBD35wQ0moFHoQ7Yumt9XoRiZL3aCQT2mv4jcVC3clQ==
+  dependencies:
+    dompurify "^1.0.8"
+    jquery "^3.4.1"
+    simple-hotkeys "^1.0.3"
+    simple-module "^3.0.3"
+    simple-uploader "^3.0.0"
+
+simple-hotkeys@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmmirror.com/simple-hotkeys/-/simple-hotkeys-1.0.3.tgz#47a5bc35362ca7339611bd09a84fa37818b0bbc6"
+  integrity sha512-F1oa1phoHN8OWYqw9z4NhtLiXPLSsqUxdTFhbSUsgY3akcmbOYHYI9V0Lg27qJB5uCpgMSdb/w1vDBdWKObSSw==
+  dependencies:
+    jquery "2.x"
+    simple-module "~2.0.5"
+
+simple-module@^3.0.3, simple-module@~3.0.0:
+  version "3.0.3"
+  resolved "https://registry.npmmirror.com/simple-module/-/simple-module-3.0.3.tgz#ad52766785d27cd9427ee8645a49e41199725a92"
+  integrity sha512-jSlQus9anldGQJ9hYP5S6ReR6upj60PzwvoNmOyZjdqFmc68pmKH3ChEhsU3lY+AgCczjYNaPPpBkTPu15hcKQ==
+  dependencies:
+    jquery "^3.0.0"
+
+simple-module@~2.0.5:
+  version "2.0.6"
+  resolved "https://registry.npmmirror.com/simple-module/-/simple-module-2.0.6.tgz#cec8250325f8c7f575f4aa75c919b38396a6037b"
+  integrity sha512-uyGIeOVlGZxOhADL6anB/GAq/XvmFe0hdgckQWrQ+bUwTuKMI5O1jz9i9/nNSdVzuwHaS/eMXaJiSz0JJgNyKA==
+  dependencies:
+    jquery "2.x"
+
+simple-uploader@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmmirror.com/simple-uploader/-/simple-uploader-3.0.0.tgz#c09f706f1cfcbea1fe780e35759a683b1336d4d1"
+  integrity sha512-7z7lm+iP1mmSF0zPCPU4zvhwNSVomYtvpkS47XMC04OxKEXjniQ4QYzpnFI76zfDGbs+bZTC+Yi1DQY6uZM1HQ==
+  dependencies:
+    jquery "~3.1.0"
+    simple-module "~3.0.0"
 
 slash@^1.0.0:
   version "1.0.0"
